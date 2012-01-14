@@ -1,0 +1,9 @@
+{
+    "name": "lazydb",
+    "description": "a lazy JSON based in-process data store",
+    "author": "Nathan LaFreniere",
+    "version": "0.1.0",
+    "main": "./lib/lazydb.js",
+    "repository": "git://github.com/nathan-lafreniere/node-lazydb.git",
+    "keywords": [ "database", "nosql", "store", "json" ]
+}
