@@ -34,6 +34,12 @@ Currently only supports one query per call.. returns a dictionary of findings
       }
 	});
 
+There is also a findOne function that will return a single matching item, rather than a set of all matches
+
+    users.findOne({ data: 'contents' }, function (err, result) {
+        console.log(JSON.stringify(result));
+    });
+
 Getting all documents
 ---------------------
 Returns a dictionary of all keys in the database
