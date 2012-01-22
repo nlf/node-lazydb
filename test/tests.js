@@ -22,7 +22,7 @@ exports.testGet = function (test) {
 
 exports.testGetAll = function (test) {
     testdb.set('test2', { test: 'data' }, function (err) {
-        testdb.getAll( function (results) {
+        testdb.getAll(function (results) {
             test.notEqual(results, null);
             var count = Object.keys(results).length;
             test.equal(count, 2);
@@ -52,5 +52,14 @@ exports.testFind = function (test) {
                 test.done();
             });
         });
+    });
+};
+
+exports.testFindOne = function (test) {
+    testdb.findOne({ test: 'data' }, function (err, id, result) {
+        test.equal(err, null);
+        test.notEqual(id, null);
+        test.notEqual(result, null);
+        test.done();
     });
 };
